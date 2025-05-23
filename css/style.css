@@ -1,0 +1,190 @@
+/* ==========================================
+
+共通
+
+==========================================*/
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex; /* footer固定のため */
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: #5f4c42;
+  background-color: #fce7d7;
+  font-family: "ads-ayumin", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+/* ==========================================
+
+ヘッダー
+
+==========================================*/
+
+h1 {
+  font-weight: bold;
+  font-size: 49px;
+  text-align: center;
+  color: #6199ed;
+  padding: 30px 0 40px 0;
+}
+
+span {
+  font-size: 3.8rem;
+  color: #fa776d;
+}
+
+.sp-br {
+  display: none;
+}
+
+/* --------------- スマホサイズ --------------- */
+
+@media screen and (max-width: 768px) {
+  .sp-br {
+    display: block;
+  }
+}
+
+/* ==========================================
+
+フードイラスト
+
+==========================================*/
+
+main {
+  flex-grow: 1; /* 親要素（body）の残りのスペースを全て占める */
+}
+
+.item-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px; /* 行間の余白 */
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 3列になったとき最後左寄せに */
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 15%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* 正方形の縦横比を維持 */
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  min-width: 80px; /* 最小幅 */
+  min-height: 80px; /* 最小高さ */
+}
+
+.food-image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* ----------- フードを選択したとき ------------ */
+
+.selected {
+  background-color: #fa776d;
+  opacity: 0.8;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------- スマホサイズ --------------- */
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: calc(33.33% - 10px);
+    min-width: 100px;
+    height: auto;
+    margin: 5px;
+  }
+}
+
+/* ==========================================
+
+金額
+
+==========================================*/
+
+#cart {
+  margin-bottom: 40px;
+}
+
+#cart-info {
+  margin: 0 auto; /* 中央揃え */
+  text-align: center;
+}
+
+#btn {
+  margin-top: 20px;
+  font-family: "ads-ayumin", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  background-color: #31a835;
+  border: 2px solid #31a835;
+  padding: 15px 30px; /* 内側の余白（上下10px、左右20px） */
+  border-radius: 8px;
+  cursor: pointer; /* カーソルをポインター */
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #ffee2f; /* ホバー時の背景色 */
+  color: #31a835;
+  border: 2px solid #31a835;
+  transition: background-color 0.3s ease;
+}
+
+#final-total {
+  font-size: 30px;
+}
+
+/* ==========================================
+
+リセットボタン
+
+==========================================*/
+
+.r-btn {
+  margin-bottom: 20px; /* ★この行を追加します★ */
+  text-align: center;
+}
+
+#reset-btn {
+  font-size: 15px;
+  color: #fa776d;
+  cursor: pointer;
+}
+
+/* ==========================================
+
+フッター
+
+==========================================*/
+
+footer {
+  background-color: #fa776d;
+  padding: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}

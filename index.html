@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <!-- リセットcss -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Adobeフォント -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'ywp8ssl',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <title>おかいもの</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1><span>お</span>か<span>い</span>も<span>の</span><br class="sp-br">し<span>て</span>み<span>よ</span>う</h1>
+    </header>
+
+    <!-- メイン -->
+    <main>
+        <!-- イラスト -->
+        <section class="container">
+            <div class="item-row">
+                <div class="box"><img src="./img/food01.png" class="food-image" data-name="ブロッコリー" data-price="230">
+                </div>
+                <div class="box"><img src="./img/food02.png" class="food-image" data-name="にんじん" data-price="260"></div>
+                <div class="box"><img src="./img/food03.png" class="food-image" data-name="しいたけ" data-price="250"></div>
+                <div class="box"><img src="./img/food04.png" class="food-image" data-name="バナナ" data-price="190"></div>
+                <div class="box"><img src="./img/food05.png" class="food-image" data-name="りんご" data-price="380"></div>
+                <div class="box"><img src="./img/food06.png" class="food-image" data-name="さかな" data-price="420"></div>
+                <div class="box"><img src="./img/food07.png" class="food-image" data-name="たまご" data-price="340"></div>
+                <div class="box"><img src="./img/food08.png" class="food-image" data-name="牛乳" data-price="220"></div>
+                <div class="box"><img src="./img/food09.png" class="food-image" data-name="ケーキ" data-price="420"></div>
+                <div class="box"><img src="./img/food010.png" class="food-image" data-name="アイス" data-price="190"></div>
+            </div>
+        </section>
+
+        <section id="cart">
+
+            <!-- 金額 -->
+            <div id="cart-info">
+                <p>【えらんだしょうひん】</p>
+                <p id="cart-area">まだえらんでないよ</p> <!-- 初期テキスト -->
+                <button id="btn">おかいけいする</button>
+                <p id="final-total">--円</p> <!-- 初期テキスト -->
+            </div>
+
+        </section>
+
+        <div id="pop"></div> <!-- ポップアップ -->
+
+    </main>
+    <div class="r-btn">
+        <p id="reset-btn">もとにもどす</p>
+    </div>
+
+    <footer>
+        &copy;2025 おかいものしよう
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
