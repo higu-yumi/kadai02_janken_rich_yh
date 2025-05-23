@@ -43,7 +43,7 @@ paymentButton.addEventListener("click", function () {
   }, 0); //初期値0からスタート
 
   // ★totalSumに合計金額を表示
-  totalSum.textContent = `合計：${total}円`;
+  totalSum.textContent = `ぜんぶで${total}円`;
 });
 
 // ★リセットボタン
