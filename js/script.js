@@ -42,8 +42,8 @@ paymentButton.addEventListener("click", function () {
     return currentTotal + foodItem.price;
   }, 0); //初期値0からスタート
 
-  // ★totalSumに合計金額を表示
-  totalSum.textContent = `ぜんぶで${total}円`;
+  // ★totalSumに合計金額を表示、.toLocaleString()でカンマつける
+  totalSum.textContent = `ぜんぶで${total.toLocaleString()}円`;
 });
 
 // ★リセットボタン
