@@ -14,14 +14,14 @@ foods.forEach(function (image) {
     const foodCircle = image.closest(".box"); // closestで親要素（.box）取得、正円の特定
     foodCircle.classList.toggle("selected"); // boxに'selected'クラスを付け外し
     const foodName = image.dataset.name; //クリックされた商品名を取得
-    const foodPrice = parseInt(image.dataset.price); //クリックされた単価を取得、parseIntで数値に変換
+    const foodPrice = parseInt(image.dataset.price); //クリックされた単価を取得、parseInt（パーズイント）で文字列を整数に変換
     //商品が「選択された」のか「選択解除された」のかを判断して、配列を操作する処理
-    if (foodCircle.classList.contains("selected")) {
+    if (foodCircle.classList.contains("selected")) { // contains（コンテインズ）指定したCSSクラスが、その要素に含まれてるか
       selectedFoods.push({ name: foodName, price: foodPrice });
     } else {
-      const index = selectedFoods.findIndex((item) => item.name === foodName); // 選択解除されたら配列から商品削除
+      const index = selectedFoods.findIndex((item) => item.name === foodName); // 選択解除されたら配列から商品削除 findIndex()配列から特定条件に合う最初の要素のインデックスを見つけて返す
       if (index !== -1) {
-        selectedFoods.splice(index, 1); //indexから1つだけ要素削除
+        selectedFoods.splice(index, 1); //indexから1つだけ要素削除 splice()スプライス 配列の要素を追加・削除・置き換えできる
       }
     }
 
